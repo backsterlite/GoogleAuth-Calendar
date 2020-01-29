@@ -1,0 +1,23 @@
+Как запустить проект:
+1. Настроить Google приложение
+    1.1 Настроить Идентификатор клиентов OAuth 2.0
+    1.2 Указать Разрешенные URI перенаправления
+        http://YourDomain/oauth
+        http://YourDomain/auth/google/callback
+    1.3 Скачать файл JSON  с настройками
+        1.3.1 Поместить этот файл в public/client_secret.json
+    1.4  файл .env поместить следующие строки
+        1.4.1
+                GOOGLE_CLIENT_ID=YOUR_GOOGLE_CLIENT_ID
+                GOOGLE_CLIENT_SECRET=YOUR_GOOGLE_CLIENT_SECRET
+                GOOGLE_URL=http://googleloginapi.com/auth/google/callback
+2. Настроить приложение
+    2.1 Настроить доступ в базу данных MySQL
+    2.2 php artisan migrate
+    2.3 php artisan serve
+    2.4 Пробрасывает по адресу .../login переходим по "Login with Google" после выбираем Calendar и аккаунт который нужно
+    2.5 END
+3. Функционал
+    3.1 При клике на пустое пространство дня можно добавить событие
+    3.2 При клике на событие можно редактировать или удалить  событие
+
